@@ -14,7 +14,7 @@ $beli_otp = new BeliOtp(
 
 echo 'Shell Asia Account Creator' . PHP_EOL . PHP_EOL;
 $total_account = readline("How many account(s): ");
-for ($i=0; $i < $total_account; $i++) { 
+for ($i=0; $i < intval($total_account); $i++) { 
     $get_profile = $beli_otp->profile();
     if ($get_profile['status']) {
         $balance = $get_profile['data']['balance'];
